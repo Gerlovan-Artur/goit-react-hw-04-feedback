@@ -1,0 +1,12 @@
+.statistics {
+    font-size: 18px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.value {
+    font-size: 17px;
+}
