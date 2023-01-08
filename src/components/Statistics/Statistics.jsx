@@ -5,8 +5,8 @@ export const Statistics = ({
   good,
   bad,
   neutral,
-  total,
-  positivePercentage,
+  countTotalFeedback,
+  countPositiveFeedbackPercentage,
 }) => {
   return (
     <ul className={styles.statistics_list}>
@@ -20,10 +20,10 @@ export const Statistics = ({
         Bad: <span>{bad}</span>
       </li>
       <li>
-        Total: <span>{total}</span>
+        Total: <span>{countTotalFeedback()}</span>
       </li>
       <li>
-        Positive feedback: <span>{positivePercentage}%</span>
+        Positive feedback: <span>{Math.round(countPositiveFeedbackPercentage())}%</span>
       </li>
     </ul>
   );
@@ -33,6 +33,6 @@ Statistics.propTypes = {
   good: propTypes.number.isRequired,
   neutral: propTypes.number.isRequired,
   bad: propTypes.number.isRequired,
-  total: propTypes.number.isRequired,
-  positivePercentage: propTypes.number.isRequired,
+  countTotalFeedback: propTypes.number.isRequired,
+  countPositiveFeedbackPercentage: propTypes.number.isRequired,
 };
